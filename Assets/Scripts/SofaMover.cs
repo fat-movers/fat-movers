@@ -3,21 +3,49 @@ using System.Collections;
 
 public class SofaMover : MonoBehaviour {
 
+	private float rotateMulti = 10.0f;
+	private float walkMulti = 2.5f;
+	public KeyCode leftKey;
+	public KeyCode rightKey;
+	public SofaMover otherPlayer;
+
+	private Vector3 publicRotation = Vector3.zero;
+	private Vector3 publicVelocity = Vector3.zero;
+
+	public void SetRotation(Vector3 rotation) {
+		publicRotation = rotation;
+	}
+
+	public void SetVelocity(Vector3 velocity) {
+		publicVelocity = velocity;
+	}
+
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
-	// Update is called once per frame
+	void Update() {
+	}
+
 	void FixedUpdate () {
-		if(Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)){
-			rigidbody.AddRelativeForce(Vector3.left *1000);
-			Vector3 currentDir = transform.TransformDirection(Vector3.left);
-			Debug.DrawRay(transform.position, currentDir, Color.white, 1.0f);
-		}else if(Input.GetKey(KeyCode.A)){
-			
-		}else if(Input.GetKey(KeyCode.D)){
-			
+
+		Vector3 ownVelocity = Vector3.zero;
+		Vector3 ownRotation = Vector3.zero;
+		otherPlayer.SetRotation(Vector3.zero);
+		otherPlayer.SetVelocity(Vector3.zero);
+
+		if (Input.GetKey (leftKey) && Input.GetKey (rightKey)) {
+			ownVelocity = Vector3.right*walkMulti;
+		} else if (Input.GetKey (leftKey)) {
+			otherPlayer.SetRotation(Vector3.up*rotateMulti);
+			ownVelocity = Vector3.forward*walkMulti;
+		} else if (Input.GetKey (rightKey)) {
+			otherPlayer.SetRotation(-Vector3.up*rotateMulti);
+			ownVelocity = -Vector3.forward*walkMulti;
 		}
+
+		rigidbody.angularVelocity = transform.TransformDirection(ownRotation + publicRotation);
+		rigidbody.velocity = transform.TransformDirection(ownVelocity + publicVelocity);
 	}
 }
