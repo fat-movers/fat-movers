@@ -8,8 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mainmenu.unity
   - enabled: 1
-    path: Assets/Scenes/level1.unity
-  - enabled: 1
     path: Assets/Scenes/jesse.unity
   - enabled: 1
     path: Assets/Scenes/taso1.unity
