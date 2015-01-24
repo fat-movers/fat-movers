@@ -46,6 +46,7 @@ GameObject:
   - 223: {fileID: 22301760}
   - 114: {fileID: 11401728}
   - 114: {fileID: 11401730}
+  - 111: {fileID: 11160250}
   m_Layer: 5
   m_Name: StartCanvas
   m_TagString: Untagged
@@ -98,6 +99,7 @@ GameObject:
   - 223: {fileID: 22301762}
   - 114: {fileID: 11401736}
   - 114: {fileID: 11401738}
+  - 111: {fileID: 11160248}
   m_Layer: 5
   m_Name: LevelSelectionCanvas
   m_TagString: Untagged
@@ -221,6 +223,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 401764}
   m_RootOrder: 0
+--- !u!111 &11160248
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101750}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 79aec63a7ab9e47b29de6399c6695797, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 79aec63a7ab9e47b29de6399c6695797, type: 2}
+  - {fileID: 7400000, guid: 32734d82305184b4fb4f2a0f7084b3e9, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &11160250
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 101744}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 32734d82305184b4fb4f2a0f7084b3e9, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 32734d82305184b4fb4f2a0f7084b3e9, type: 2}
+  - {fileID: 7400000, guid: 79aec63a7ab9e47b29de6399c6695797, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11401722
 MonoBehaviour:
   m_ObjectHideFlags: 1

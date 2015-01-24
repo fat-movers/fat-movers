@@ -12,10 +12,13 @@ public class MenuManager : MonoBehaviour {
 	public GameObject levelSelectionCanvas;
 	public GameObject gameMenuCanvas;
 	public GameObject levelWonCanvas;
+	public GameObject faderCanvas;
+
 
 	public GameObject menuButtonPrefab;
 
 	private GameObject currentMenu;
+	private bool lastFaderEnabled = false; 
 	
 	public void InitMenu(GameState gameState) {
 
@@ -29,10 +32,10 @@ public class MenuManager : MonoBehaviour {
 			currentMenu = Instantiate(mainMenuPrefab) as GameObject;
 			currentMenu.name = "Menu";
 			startCanvas = GameObject.Find("/Menu/StartCanvas");
-			startCanvas.SetActive(true);
+			startCanvas.GetComponent<Canvas>().enabled = true;
 			levelSelectionCanvas = GameObject.Find("/Menu/LevelSelectionCanvas");
-			levelSelectionCanvas.SetActive(false);
-			startCanvas.SetActive(true);
+			levelSelectionCanvas.GetComponent<Canvas>().enabled = false;
+			faderCanvas = GameObject.Find("/Menu/FaderCanvas");
 			CreateLevelSelectionMenu();
 		}
 			break;
@@ -41,9 +44,10 @@ public class MenuManager : MonoBehaviour {
 			currentMenu = Instantiate(mainMenuPrefab) as GameObject;
 			currentMenu.name = "Menu";
 			startCanvas = GameObject.Find("/Menu/StartCanvas");
-			startCanvas.SetActive(false);
+			startCanvas.GetComponent<Canvas>().enabled = false;
 			levelSelectionCanvas = GameObject.Find("/Menu/LevelSelectionCanvas");
-			levelSelectionCanvas.SetActive(true);
+			levelSelectionCanvas.GetComponent<Canvas>().enabled = true;
+			faderCanvas = GameObject.Find("/Menu/FaderCanvas");
 			CreateLevelSelectionMenu();
 		}
 			break;
@@ -53,11 +57,14 @@ public class MenuManager : MonoBehaviour {
 			currentMenu.name = "Menu";
 			gameMenuCanvas = GameObject.Find("/Menu/GameMenu");
 			levelWonCanvas = GameObject.Find("/Menu/LevelWonCanvas");
-			levelWonCanvas.SetActive(false);
+			levelWonCanvas.GetComponent<Canvas>().enabled = false;
+			faderCanvas = GameObject.Find("/Menu/FaderCanvas");
 		}
 			break;
 
 		}
+
+		faderCanvas.GetComponent<Canvas>().enabled = lastFaderEnabled;
 	}
 
 	// Private methods
@@ -75,29 +82,60 @@ public class MenuManager : MonoBehaviour {
 
 	// Public methods
 	public void MoveToLevelSelection(){
+		StartCoroutine (DoMoveToLevelSelection ());
+	}
+	IEnumerator DoMoveToLevelSelection() {
 		if(startCanvas && levelSelectionCanvas){
-			startCanvas.SetActive(false);
-			levelSelectionCanvas.SetActive(true);
+			startCanvas.animation.Play("CanvasOut");
+			yield return new WaitForSeconds(0.2f);
+			levelSelectionCanvas.animation.Play("CanvasIn");
 		}
 	}
 
 	public void StartLevel(string customParamsString){
+		StartCoroutine ("DoStartLevel", customParamsString);
+	}
+	IEnumerator DoStartLevel(string customParamsString){
+		levelSelectionCanvas.animation.Play("CanvasOut");
+		faderCanvas.animation.Play ("FaderIn");
+		lastFaderEnabled = true;
+		yield return new WaitForSeconds(0.2f);
 		superManager.gameManager.MoveToScene(customParamsString);
 		superManager.gameManager.currentGameState = GameState.Level;
+		yield return new WaitForSeconds(0.1f);
+		faderCanvas.animation.Play ("FaderOut");
+		lastFaderEnabled = false;
 	}
 
 	public void LevelSelectionBack(){
+		StartCoroutine (DoLevelSelectionBack ());
+	}
+	IEnumerator DoLevelSelectionBack() {
 		if(startCanvas && levelSelectionCanvas){
-			startCanvas.SetActive(true);
-			levelSelectionCanvas.SetActive(false);
+			levelSelectionCanvas.animation.Play("CanvasOut");
+			yield return new WaitForSeconds(0.2f);
+			startCanvas.animation.Play("CanvasIn");
+			//startCanvas.GetComponent<Canvas>().enabled = true;
+			//levelSelectionCanvas.GetComponent<Canvas>().enabled = false;
 		}
 	}
 
 	public void BackToMainMenu(){
+		StartCoroutine (DoBackToMainMenu());
+	}
+	IEnumerator DoBackToMainMenu() {
+		faderCanvas.animation.Play ("FaderIn");
+		lastFaderEnabled = true;
+		yield return new WaitForSeconds(0.2f);
 		superManager.gameManager.MoveToScene("mainmenu");
+		yield return new WaitForSeconds(0.1f);
+		faderCanvas.animation.Play ("FaderOut");
+		lastFaderEnabled = false;
+		levelSelectionCanvas.animation.Play("CanvasIn");
+		Debug.Log (faderCanvas);
 	}
 
 	public void ShowLevelWonMenu(){
-		levelWonCanvas.SetActive(true);
+		levelWonCanvas.GetComponent<Canvas>().enabled = true;
 	}
 }
