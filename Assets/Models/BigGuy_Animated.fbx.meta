@@ -50,13 +50,14 @@ ModelImporter:
     400042: Leg_L
     400044: Leg_R
     4300000: BigGuy
-    7400000: Armature_BigGuy|BigGuy_Idle
-    7400002: Armature_BigGuy|BigGuy_Walk_BW
-    7400004: Armature_BigGuy|BigGuy_Walk_FW
-    7400006: Armature_BigGuy|BigGuy_Walk_L
-    7400008: Armature_BigGuy|BigGuy_Walk_R
+    7400000: BigGuy_Idle
+    7400002: BigGuy_Walk_BW
+    7400004: BigGuy_Walk_FW
+    7400006: BigGuy_Walk_L
+    7400008: BigGuy_Walk_R
     7400010: BigGuy|BigGuy_Idle
     9500000: //RootNode
+    11100000: //RootNode
     13700000: BigGuy
   materials:
     importMaterials: 1
@@ -73,7 +74,439 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: BigGuy_Idle
+      takeName: Armature_BigGuy|BigGuy_Idle
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_BigGuy
+        weight: 1
+      - path: Armature_BigGuy/Bum
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly/belly_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L/Hand_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R/Hand_R_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed/Hed_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R/Foot_R_end
+        weight: 1
+      - path: BigGuy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: BigGuy_Walk_BW
+      takeName: Armature_BigGuy|BigGuy_Walk_BW
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_BigGuy
+        weight: 1
+      - path: Armature_BigGuy/Bum
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly/belly_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L/Hand_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R/Hand_R_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed/Hed_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R/Foot_R_end
+        weight: 1
+      - path: BigGuy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: BigGuy_Walk_FW
+      takeName: Armature_BigGuy|BigGuy_Walk_FW
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_BigGuy
+        weight: 1
+      - path: Armature_BigGuy/Bum
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly/belly_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L/Hand_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R/Hand_R_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed/Hed_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R/Foot_R_end
+        weight: 1
+      - path: BigGuy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: BigGuy_Walk_L
+      takeName: Armature_BigGuy|BigGuy_Walk_L
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_BigGuy
+        weight: 1
+      - path: Armature_BigGuy/Bum
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly/belly_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L/Hand_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R/Hand_R_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed/Hed_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R/Foot_R_end
+        weight: 1
+      - path: BigGuy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: BigGuy_Walk_R
+      takeName: Armature_BigGuy|BigGuy_Walk_R
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_BigGuy
+        weight: 1
+      - path: Armature_BigGuy/Bum
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly/belly_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L/Hand_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R/Hand_R_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed/Hed_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R/Foot_R_end
+        weight: 1
+      - path: BigGuy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: BigGuy|BigGuy_Idle
+      takeName: BigGuy|BigGuy_Idle
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature_BigGuy
+        weight: 1
+      - path: Armature_BigGuy/Bum
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly
+        weight: 1
+      - path: Armature_BigGuy/Bum/belly/belly_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_L/Forearm_L/Hand_L/Hand_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Arm_R/Forearm_R/Hand_R/Hand_R_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed
+        weight: 1
+      - path: Armature_BigGuy/Bum/Chest/Hed/Hed_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_L/Foot_L/Foot_L_end
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R
+        weight: 1
+      - path: Armature_BigGuy/Bum/Leg_R/Foot_R/Foot_R_end
+        weight: 1
+      - path: BigGuy
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -94,7 +527,7 @@ ModelImporter:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -109,6 +542,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
