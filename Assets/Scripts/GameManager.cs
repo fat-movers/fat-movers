@@ -28,4 +28,8 @@ public class GameManager : MonoBehaviour {
 	public void MoveToScene(string customParamsString){
 		Application.LoadLevel(customParamsString);
 	}
+
+	public void RestartCurrentLevel(){
+		Application.LoadLevel(Application.loadedLevel);
+	}
 }
