@@ -1664,7 +1664,7 @@ GameObject:
   - 4: {fileID: 635681302}
   - 33: {fileID: 635681301}
   - 23: {fileID: 635681300}
-  - 95: {fileID: 635681299}
+  - 111: {fileID: 635681299}
   m_Layer: 0
   m_Name: sofabig
   m_TagString: Untagged
@@ -1672,22 +1672,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &635681299
-Animator:
-  serializedVersion: 3
+--- !u!111 &635681299
+Animation:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9561502, guid: d48f7edd2f478474883d6c56bb819509,
+  m_PrefabParentObject: {fileID: 11192526, guid: d48f7edd2f478474883d6c56bb819509,
     type: 2}
   m_PrefabInternal: {fileID: 1292149786}
   m_GameObject: {fileID: 635681298}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 0c0aa16ec828d3e49b143c01d0aa1f90, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: edce36a8089fb4dc994f11148dd57560, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: edce36a8089fb4dc994f11148dd57560, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!23 &635681300
 Renderer:
   m_ObjectHideFlags: 0

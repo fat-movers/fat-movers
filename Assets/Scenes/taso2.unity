@@ -363,7 +363,7 @@ Transform:
   m_Children:
   - {fileID: 145921996}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &130381298
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +401,7 @@ GameObject:
   - 4: {fileID: 145921996}
   - 33: {fileID: 145921999}
   - 23: {fileID: 145921998}
-  - 95: {fileID: 145921997}
+  - 111: {fileID: 145921997}
   m_Layer: 0
   m_Name: sofabig
   m_TagString: Untagged
@@ -421,22 +421,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 125185143}
   m_RootOrder: 0
---- !u!95 &145921997
-Animator:
-  serializedVersion: 3
+--- !u!111 &145921997
+Animation:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9561502, guid: d48f7edd2f478474883d6c56bb819509,
+  m_PrefabParentObject: {fileID: 11192526, guid: d48f7edd2f478474883d6c56bb819509,
     type: 2}
   m_PrefabInternal: {fileID: 518874441}
   m_GameObject: {fileID: 145921995}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 0c0aa16ec828d3e49b143c01d0aa1f90, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: edce36a8089fb4dc994f11148dd57560, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: edce36a8089fb4dc994f11148dd57560, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!23 &145921998
 Renderer:
   m_ObjectHideFlags: 0
@@ -2628,7 +2628,7 @@ Transform:
   - {fileID: 1070294222}
   - {fileID: 1595834399}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1261225042
 GameObject:
   m_ObjectHideFlags: 0
