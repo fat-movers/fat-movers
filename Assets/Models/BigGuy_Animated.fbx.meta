@@ -1,0 +1,114 @@
+fileFormatVersion: 2
+guid: d71894351028a49c6b86ff8c14dd95a6
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Arm_L
+    100002: Arm_R
+    100004: Armature_BigGuy
+    100006: belly
+    100008: belly_end
+    100010: BigGuy
+    100012: //RootNode
+    100014: Bum
+    100016: Chest
+    100018: Foot_L
+    100020: Foot_L_end
+    100022: Foot_R
+    100024: Foot_R_end
+    100026: Forearm_L
+    100028: Forearm_R
+    100030: Hand_L
+    100032: Hand_L_end
+    100034: Hand_R
+    100036: Hand_R_end
+    100038: Hed
+    100040: Hed_end
+    100042: Leg_L
+    100044: Leg_R
+    400000: Arm_L
+    400002: Arm_R
+    400004: Armature_BigGuy
+    400006: belly
+    400008: belly_end
+    400010: BigGuy
+    400012: //RootNode
+    400014: Bum
+    400016: Chest
+    400018: Foot_L
+    400020: Foot_L_end
+    400022: Foot_R
+    400024: Foot_R_end
+    400026: Forearm_L
+    400028: Forearm_R
+    400030: Hand_L
+    400032: Hand_L_end
+    400034: Hand_R
+    400036: Hand_R_end
+    400038: Hed
+    400040: Hed_end
+    400042: Leg_L
+    400044: Leg_R
+    4300000: BigGuy
+    7400000: Armature_BigGuy|BigGuy_Idle
+    7400002: Armature_BigGuy|BigGuy_Walk_BW
+    7400004: Armature_BigGuy|BigGuy_Walk_FW
+    7400006: Armature_BigGuy|BigGuy_Walk_L
+    7400008: Armature_BigGuy|BigGuy_Walk_R
+    7400010: BigGuy|BigGuy_Idle
+    9500000: //RootNode
+    13700000: BigGuy
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00899999961
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

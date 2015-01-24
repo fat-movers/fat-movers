@@ -8,6 +8,7 @@ public class SofaMover : MonoBehaviour {
 	public KeyCode leftKey;
 	public KeyCode rightKey;
 	public SofaMover otherPlayer;
+	public Animator animator;
 
 	private Vector3 publicRotation = Vector3.zero;
 	private Vector3 publicVelocity = Vector3.zero;

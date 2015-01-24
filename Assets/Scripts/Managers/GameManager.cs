@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour {
 			currentGameState = GameState.StartScreen;
 		}
 
+		Time.timeScale = 1;
 		currentLevelWon = false;
 		superManager.menuManager.InitMenu(currentGameState);
 	}
