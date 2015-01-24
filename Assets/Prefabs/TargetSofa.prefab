@@ -126,7 +126,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.20000005, y: 1.20000005, z: 1.29999995}
+  m_Size: {x: 1.29999995, y: 1.29999995, z: 1.39999998}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9561502
 Animator:
@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b8feef1d1e7f4a9598b98246478948b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superManager: {fileID: 0}
   gameEnderObject: {fileID: 181088, guid: 6da094413211045029c55d63a2bda99e, type: 2}
 --- !u!1001 &100100000
 Prefab:

@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour {
 	public GameObject startCanvas;
 	public GameObject levelSelectionCanvas;
 	public GameObject gameMenuCanvas;
+	public GameObject levelWonCanvas;
 
 	public GameObject menuButtonPrefab;
 
@@ -51,6 +52,8 @@ public class MenuManager : MonoBehaviour {
 			currentMenu = Instantiate(gameMenuPrefab) as GameObject;
 			currentMenu.name = "Menu";
 			gameMenuCanvas = GameObject.Find("/Menu/GameMenu");
+			levelWonCanvas = GameObject.Find("/Menu/LevelWonCanvas");
+			levelWonCanvas.SetActive(false);
 		}
 			break;
 
@@ -92,5 +95,9 @@ public class MenuManager : MonoBehaviour {
 
 	public void BackToMainMenu(){
 		superManager.gameManager.MoveToScene("mainmenu");
+	}
+
+	public void ShowLevelWonMenu(){
+		levelWonCanvas.SetActive(true);
 	}
 }

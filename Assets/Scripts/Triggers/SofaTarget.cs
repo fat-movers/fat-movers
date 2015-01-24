@@ -3,8 +3,12 @@ using System.Collections;
 
 public class SofaTarget : MonoBehaviour {
 
+	public SuperManager superManager;
 	public GameObject gameEnderObject;
-	private bool won = false;
+
+	void Start(){
+		superManager = FindObjectOfType(typeof(SuperManager)) as SuperManager;
+	}
 
 	void OnTriggerStay(Collider other) {
 
@@ -21,10 +25,8 @@ public class SofaTarget : MonoBehaviour {
 	}
 
 	void Win() {
-		if (won) return;
-		won = true;
-		Time.timeScale = 0;
-		Instantiate (gameEnderObject);
-		Debug.Log ("You win!");
+		if(!superManager.gameManager.currentLevelWon){
+			superManager.gameManager.LevelWon();
+		}
 	}
 }

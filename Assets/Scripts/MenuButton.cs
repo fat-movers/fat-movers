@@ -41,6 +41,10 @@ public class MenuButton : MonoBehaviour {
 			superManager.gameManager.currentGameState = GameState.LevelSelection;
 			superManager.menuManager.BackToMainMenu();
 			break;
+		
+		case "nextlevel":
+			superManager.gameManager.LoadNextLevel();
+			break;
 		}
 	}
 
