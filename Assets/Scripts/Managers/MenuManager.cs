@@ -128,11 +128,12 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void BackToMainMenu(){
-		StartCoroutine (DoBackToMainMenu());
+		StartCoroutine(DoBackToMainMenu());
 	}
 	IEnumerator DoBackToMainMenu() {
 		faderCanvas.animation.Play ("FaderIn");
 		lastFaderEnabled = true;
+		Time.timeScale = 1;
 		yield return new WaitForSeconds(0.2f);
 		superManager.gameManager.MoveToScene("mainmenu");
 		yield return new WaitForSeconds(0.1f);
