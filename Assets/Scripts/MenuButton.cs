@@ -20,6 +20,9 @@ public class MenuButton : MonoBehaviour {
 	}
 
 	void OnClick(){
+
+		superManager.soundManager.PlaySound(Sound.ButtonClick);
+
 		switch(actionString){
 		
 		case "menustart":

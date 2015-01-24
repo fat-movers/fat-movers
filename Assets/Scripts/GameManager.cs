@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 	public SuperManager superManager;
 	public List<LevelObject> levels;
 
-	// Use this for initialization
+	// Private methods
 	void Start () {
 		if(currentGameState == GameState.None){
 			currentGameState = GameState.Menu;
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
 		superManager.menuManager.InitMenu(currentGameState);
 	}
 
+	// Public methods
 	public void MoveToScene(string customParamsString){
 		Application.LoadLevel(customParamsString);
 	}
