@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: edaa25d0a91bd224689459a11dc83646
+guid: 16d1a7c644789e742b06154bde2910fa
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: coffeetable
+    4300000: TV
     9500000: //RootNode
   materials:
     importMaterials: 1
