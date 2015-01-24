@@ -42,6 +42,14 @@ public class MenuButton : MonoBehaviour {
 			superManager.menuManager.BackToMainMenu();
 			break;
 		
+		case "showcredits":
+			superManager.menuManager.ShowCredits();
+			break;
+
+		case "creditsback":
+			superManager.menuManager.CreditsBack();
+			break;
+
 		case "nextlevel":
 			superManager.gameManager.LoadNextLevel();
 			break;
