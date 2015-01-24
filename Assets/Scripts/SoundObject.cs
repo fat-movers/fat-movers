@@ -4,7 +4,7 @@ using System.Collections;
 public class SoundObject : MonoBehaviour {
 
 	void Start () {
-		StartCoroutine(DestroyAfterSeconds(2.0f));
+		StartCoroutine(DestroyAfterSeconds(8.0f));
 	}
 
 	IEnumerator DestroyAfterSeconds(float secondToDestroy){

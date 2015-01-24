@@ -8,7 +8,7 @@ public class SofaMover : MonoBehaviour {
 	public KeyCode leftKey;
 	public KeyCode rightKey;
 	public SofaMover otherPlayer;
-	public Animator animator;
+	public Animation animation;
 
 	private Vector3 publicRotation = Vector3.zero;
 	private Vector3 publicVelocity = Vector3.zero;
@@ -38,12 +38,21 @@ public class SofaMover : MonoBehaviour {
 
 		if (Input.GetKey (leftKey) && Input.GetKey (rightKey)) {
 			ownVelocity = Vector3.right*walkMulti;
+			animation.CrossFade("BigGuy_Walk_FW");
 		} else if (Input.GetKey (leftKey)) {
 			otherPlayer.SetRotation(Vector3.up*rotateMulti);
 			ownVelocity = Vector3.forward*walkMulti;
+			animation.CrossFade("BigGuy_Walk_L");
 		} else if (Input.GetKey (rightKey)) {
 			otherPlayer.SetRotation(-Vector3.up*rotateMulti);
 			ownVelocity = -Vector3.forward*walkMulti;
+			animation.CrossFade("BigGuy_Walk_R");
+		}else{
+			if(Mathf.Abs(rigidbody.velocity.x) > 0.3f){
+				animation.CrossFade("BigGuy_Walk_BW");
+			}else{
+				animation.CrossFade("BigGuy_Idle");
+			}
 		}
 
 		rigidbody.angularVelocity = transform.TransformDirection(ownRotation + publicRotation);

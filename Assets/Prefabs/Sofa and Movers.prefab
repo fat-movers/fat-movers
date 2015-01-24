@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490184}
-  - 95: {fileID: 9590280}
+  - 111: {fileID: 11149330}
   m_Layer: 0
   m_Name: BigGuy_Animated
   m_TagString: Untagged
@@ -686,7 +686,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490274}
-  - 95: {fileID: 9590282}
+  - 111: {fileID: 11149328}
   m_Layer: 0
   m_Name: BigGuy_Animated
   m_TagString: Untagged
@@ -795,7 +795,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190184}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalRotation: {x: 0, y: .70710659, z: 0, w: -.707106948}
   m_LocalPosition: {x: -.310000002, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1377,7 +1377,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190274}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalRotation: {x: 0, y: .70710659, z: 0, w: -.707106948}
   m_LocalPosition: {x: -.400000006, y: -1, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1616,36 +1616,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.33000004, y: 1.11000001, z: 1.42999995}
   m_Center: {x: 0, y: .150000006, z: 0}
---- !u!95 &9590280
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190184}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &9590282
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190274}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9590284
 Animator:
   serializedVersion: 3
@@ -1661,6 +1631,44 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!111 &11149328
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190274}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  m_Animations:
+  - {fileID: 7400000, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  - {fileID: 7400002, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  - {fileID: 7400004, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  - {fileID: 7400006, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  - {fileID: 7400008, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &11149330
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190184}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  m_Animations:
+  - {fileID: 7400000, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  - {fileID: 7400002, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  - {fileID: 7400004, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  - {fileID: 7400008, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  - {fileID: 7400006, guid: d71894351028a49c6b86ff8c14dd95a6, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11490280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1675,7 +1683,7 @@ MonoBehaviour:
   leftKey: 97
   rightKey: 100
   otherPlayer: {fileID: 11490282}
-  animator: {fileID: 9590280}
+  animation: {fileID: 11149330}
 --- !u!114 &11490282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1690,7 +1698,7 @@ MonoBehaviour:
   leftKey: 276
   rightKey: 275
   otherPlayer: {fileID: 11490280}
-  animator: {fileID: 9590282}
+  animation: {fileID: 11149328}
 --- !u!114 &11490284
 MonoBehaviour:
   m_ObjectHideFlags: 1

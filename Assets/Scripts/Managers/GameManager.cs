@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 		Time.timeScale = 0;
+		superManager.soundManager.PlaySound(Sound.WinFare);
 		superManager.menuManager.ShowLevelWonMenu();
 	}
 
