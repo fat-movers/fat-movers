@@ -2,7 +2,8 @@
 using System.Collections;
 
 public enum Sound{
-	ButtonClick
+	ButtonClick,
+	WinFare
 }
 
 public class SoundManager : MonoBehaviour {
@@ -10,6 +11,7 @@ public class SoundManager : MonoBehaviour {
 	public GameObject soundPrefab;
 
 	public AudioClip buttonClickAudioClip;
+	public AudioClip winFareAudioClip;
 
 	public void PlaySound(Sound newSound){
 
@@ -19,8 +21,13 @@ public class SoundManager : MonoBehaviour {
 		switch(newSound){
 		case Sound.ButtonClick:
 			soundObject.GetComponent<AudioSource>().clip = buttonClickAudioClip;
-			soundObject.GetComponent<AudioSource>().Play();
+			break;
+
+		case Sound.WinFare:
+			soundObject.GetComponent<AudioSource>().clip = winFareAudioClip;
 			break;
 		}
+
+		soundObject.GetComponent<AudioSource>().Play();
 	}
 }
