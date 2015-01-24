@@ -24,13 +24,22 @@ public class MenuButton : MonoBehaviour {
 		superManager.soundManager.PlaySound(Sound.ButtonClick);
 
 		switch(actionString){
-		
+
 		case "menustart":
 			superManager.menuManager.MoveToLevelSelection();
 			break;
 
 		case "startlevel":
 			superManager.menuManager.StartLevel(customParamsString);
+			break;
+
+		case "levelselectionback":
+			superManager.menuManager.LevelSelectionBack();
+			break;
+
+		case "backtomainmenu":
+			superManager.gameManager.currentGameState = GameState.LevelSelection;
+			superManager.menuManager.BackToMainMenu();
 			break;
 		}
 	}

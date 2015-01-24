@@ -5,20 +5,55 @@ public class MenuManager : MonoBehaviour {
 
 	public SuperManager superManager;
 
+	public GameObject mainMenuPrefab;
+	public GameObject gameMenuPrefab;
+
 	public GameObject startCanvas;
 	public GameObject levelSelectionCanvas;
+	public GameObject gameMenuCanvas;
 
 	public GameObject menuButtonPrefab;
+
+	private GameObject currentMenu;
 	
 	public void InitMenu(GameState gameState) {
-		if(gameState == GameState.Menu){
-			startCanvas = GameObject.Find("/Menu/StartCanvas");
-			levelSelectionCanvas = GameObject.Find("/Menu/LevelSelectionCanvas");
-			if(levelSelectionCanvas){
-				levelSelectionCanvas.SetActive(false);
-			}
 
+		if(currentMenu){
+			Destroy(currentMenu);
+		}
+
+		switch(gameState){
+
+		case GameState.StartScreen:{
+			currentMenu = Instantiate(mainMenuPrefab) as GameObject;
+			currentMenu.name = "Menu";
+			startCanvas = GameObject.Find("/Menu/StartCanvas");
+			startCanvas.SetActive(true);
+			levelSelectionCanvas = GameObject.Find("/Menu/LevelSelectionCanvas");
+			levelSelectionCanvas.SetActive(false);
+			startCanvas.SetActive(true);
 			CreateLevelSelectionMenu();
+		}
+			break;
+
+		case GameState.LevelSelection:{
+			currentMenu = Instantiate(mainMenuPrefab) as GameObject;
+			currentMenu.name = "Menu";
+			startCanvas = GameObject.Find("/Menu/StartCanvas");
+			startCanvas.SetActive(false);
+			levelSelectionCanvas = GameObject.Find("/Menu/LevelSelectionCanvas");
+			levelSelectionCanvas.SetActive(true);
+			CreateLevelSelectionMenu();
+		}
+			break;
+
+		case GameState.Level:{
+			currentMenu = Instantiate(gameMenuPrefab) as GameObject;
+			currentMenu.name = "Menu";
+			gameMenuCanvas = GameObject.Find("/Menu/GameMenu");
+		}
+			break;
+
 		}
 	}
 
@@ -45,5 +80,17 @@ public class MenuManager : MonoBehaviour {
 
 	public void StartLevel(string customParamsString){
 		superManager.gameManager.MoveToScene(customParamsString);
+		superManager.gameManager.currentGameState = GameState.Level;
+	}
+
+	public void LevelSelectionBack(){
+		if(startCanvas && levelSelectionCanvas){
+			startCanvas.SetActive(true);
+			levelSelectionCanvas.SetActive(false);
+		}
+	}
+
+	public void BackToMainMenu(){
+		superManager.gameManager.MoveToScene("mainmenu");
 	}
 }

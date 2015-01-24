@@ -4,8 +4,9 @@ using System.Collections.Generic;
 
 public enum GameState{
 	None,
-	Menu,
-	Level
+	StartScreen,
+	LevelSelection,
+	Level,
 }
 
 public class GameManager : MonoBehaviour {
@@ -16,9 +17,13 @@ public class GameManager : MonoBehaviour {
 	public List<LevelObject> levels;
 
 	// Private methods
-	void Start () {
+	void Start(){
+		OnLevelWasLoaded();
+	}
+
+	void OnLevelWasLoaded () {
 		if(currentGameState == GameState.None){
-			currentGameState = GameState.Menu;
+			currentGameState = GameState.StartScreen;
 		}
 
 		superManager.menuManager.InitMenu(currentGameState);
