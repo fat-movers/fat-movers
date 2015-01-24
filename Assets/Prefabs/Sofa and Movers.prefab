@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &112774
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -13,6 +13,8 @@ GameObject:
   - 124: {fileID: 12412774}
   - 81: {fileID: 8112774}
   - 114: {fileID: 11412774}
+  - 114: {fileID: 11461708}
+  - 114: {fileID: 11461706}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -816,10 +818,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112774}
   m_LocalRotation: {x: .541038036, y: 0, z: 0, w: .840998113}
-  m_LocalPosition: {x: -.0699999705, y: 8, z: -3.95000029}
-  m_LocalScale: {x: .34934485, y: .990961432, z: .86696893}
+  m_LocalPosition: {x: -.530375004, y: 9.87000179, z: -3.95000029}
+  m_LocalScale: {x: 1, y: 1.02076447, z: .992614567}
   m_Children: []
-  m_Father: {fileID: 490280}
+  m_Father: {fileID: 490282}
   m_RootOrder: 0
 --- !u!4 &490184
 Transform:
@@ -1428,7 +1430,7 @@ Transform:
   m_LocalScale: {x: .00854275469, y: .0244536437, z: .0208116099}
   m_Children: []
   m_Father: {fileID: 490280}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &490278
 Transform:
   m_ObjectHideFlags: 1
@@ -1441,7 +1443,7 @@ Transform:
   m_Children:
   - {fileID: 490274}
   m_Father: {fileID: 490282}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &490280
 Transform:
   m_ObjectHideFlags: 1
@@ -1452,10 +1454,9 @@ Transform:
   m_LocalPosition: {x: -.330000013, y: .469999999, z: 0}
   m_LocalScale: {x: 2.86250114, y: 1.17500019, z: 1}
   m_Children:
-  - {fileID: 412774}
   - {fileID: 490276}
   m_Father: {fileID: 490282}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!4 &490282
 Transform:
   m_ObjectHideFlags: 1
@@ -1466,6 +1467,7 @@ Transform:
   m_LocalPosition: {x: 2.28999996, y: 1.04999995, z: -1.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 412774}
   - {fileID: 490284}
   - {fileID: 490278}
   - {fileID: 490280}
@@ -1483,7 +1485,7 @@ Transform:
   m_Children:
   - {fileID: 490184}
   m_Father: {fileID: 490282}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!20 &2012774
 Camera:
   m_ObjectHideFlags: 1
@@ -1759,6 +1761,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684d4abbb2c2549ca8cc55c2195ec3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11461706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885b1972ad11a921d000d37b8d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 490280}
+  distance: 7
+  height: 10
+  heightDamping: 2
+  rotationDamping: 3
+--- !u!114 &11461708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4debc9ad1110f6d00074c88d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 490280}
+  damping: 6
+  smooth: 1
 --- !u!114 &11490280
 MonoBehaviour:
   m_ObjectHideFlags: 1
