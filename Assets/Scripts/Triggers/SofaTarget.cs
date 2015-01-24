@@ -7,10 +7,11 @@ public class SofaTarget : MonoBehaviour {
 	private bool won = false;
 
 	void OnTriggerStay(Collider other) {
+
 		if(collider.bounds.Contains(other.bounds.min) &&
 		   collider.bounds.Contains(other.bounds.max) &&
 		   other.gameObject.GetComponent<Sofa>() != null &&
-		   Mathf.Abs(other.gameObject.transform.rotation.y - transform.rotation.y) < 0.10f) {
+		   Mathf.Abs(other.gameObject.transform.eulerAngles.y - transform.eulerAngles.y) < 10.0f) {
 			//Debug.Log(other.gameObject.transform.rotation.y + " " + transform.rotation.y);
 			//Debug.Log("Sohva jeejee");
 			Win();
