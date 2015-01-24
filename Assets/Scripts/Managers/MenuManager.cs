@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour {
 	public GameObject gameMenuPrefab;
 
 	public GameObject startCanvas;
+	public GameObject creditsCanvas;
 	public GameObject levelSelectionCanvas;
 	public GameObject gameMenuCanvas;
 	public GameObject levelWonCanvas;
@@ -35,6 +36,8 @@ public class MenuManager : MonoBehaviour {
 			startCanvas.GetComponent<Canvas>().enabled = true;
 			levelSelectionCanvas = GameObject.Find("/Menu/LevelSelectionCanvas");
 			levelSelectionCanvas.GetComponent<Canvas>().enabled = false;
+			creditsCanvas = GameObject.Find("/Menu/CreditsCanvas");
+			creditsCanvas.GetComponent<Canvas>().enabled = false;
 			faderCanvas = GameObject.Find("/Menu/FaderCanvas");
 			CreateLevelSelectionMenu();
 		}
@@ -47,6 +50,8 @@ public class MenuManager : MonoBehaviour {
 			startCanvas.GetComponent<Canvas>().enabled = false;
 			levelSelectionCanvas = GameObject.Find("/Menu/LevelSelectionCanvas");
 			levelSelectionCanvas.GetComponent<Canvas>().enabled = true;
+			creditsCanvas = GameObject.Find("/Menu/CreditsCanvas");
+			creditsCanvas.GetComponent<Canvas>().enabled = false;
 			faderCanvas = GameObject.Find("/Menu/FaderCanvas");
 			CreateLevelSelectionMenu();
 		}
@@ -76,7 +81,13 @@ public class MenuManager : MonoBehaviour {
 			MenuButton menuButton = newMenuButton.GetComponent<MenuButton>() as MenuButton;
 			LevelObject levelObject = superManager.gameManager.levels[i];
 			menuButton.UpdateButton(levelObject.levelName, "startlevel", levelObject.levelSceneName);
-			menuButton.SetPosition(new Vector3(0,0-(i*menuButton.GetSize().y+5),0));
+
+			if(i < 2){
+				menuButton.SetPosition(new Vector3(-105,-(i*(menuButton.GetSize().y+10))-46,0));
+			}else{
+				menuButton.SetPosition(new Vector3(105,-((i-2)*(menuButton.GetSize().y+10))-46,0));
+			}
+
 		}
 	}
 
@@ -111,13 +122,9 @@ public class MenuManager : MonoBehaviour {
 		StartCoroutine (DoLevelSelectionBack ());
 	}
 	IEnumerator DoLevelSelectionBack() {
-		if(startCanvas && levelSelectionCanvas){
-			levelSelectionCanvas.animation.Play("CanvasOut");
-			yield return new WaitForSeconds(0.2f);
-			startCanvas.animation.Play("CanvasIn");
-			//startCanvas.GetComponent<Canvas>().enabled = true;
-			//levelSelectionCanvas.GetComponent<Canvas>().enabled = false;
-		}
+		levelSelectionCanvas.animation.Play("CanvasOut");
+		yield return new WaitForSeconds(0.2f);
+		startCanvas.animation.Play("CanvasIn");
 	}
 
 	public void BackToMainMenu(){
@@ -132,10 +139,28 @@ public class MenuManager : MonoBehaviour {
 		faderCanvas.animation.Play ("FaderOut");
 		lastFaderEnabled = false;
 		levelSelectionCanvas.animation.Play("CanvasIn");
-		Debug.Log (faderCanvas);
 	}
 
 	public void ShowLevelWonMenu(){
 		levelWonCanvas.GetComponent<Canvas>().enabled = true;
+	}
+
+	public void ShowCredits(){
+		StartCoroutine(DoShowCredits());
+	}
+
+	IEnumerator DoShowCredits(){
+		startCanvas.animation.Play("CanvasOut");
+		yield return new WaitForSeconds(0.2f);
+		creditsCanvas.animation.Play("CanvasIn");
+	}
+
+	public void CreditsBack(){
+		StartCoroutine (DoCreditsBack ());
+	}
+	IEnumerator DoCreditsBack() {
+		creditsCanvas.animation.Play("CanvasOut");
+		yield return new WaitForSeconds(0.2f);
+		startCanvas.animation.Play("CanvasIn");
 	}
 }
