@@ -1338,7 +1338,7 @@ Transform:
   - {fileID: 1167219753}
   - {fileID: 1407666008}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!1 &654486095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1440,7 +1440,7 @@ Transform:
   - {fileID: 49381935}
   - {fileID: 2007297617}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!95 &698462261
 Animator:
   serializedVersion: 3
@@ -1810,7 +1810,7 @@ Transform:
   m_LocalScale: {x: 217.82338, y: 133.947632, z: 427.970703}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!64 &803851851
 MeshCollider:
   m_ObjectHideFlags: 0
