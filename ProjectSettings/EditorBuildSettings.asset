@@ -12,6 +12,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/taso1.unity
   - enabled: 1
-    path: Assets/Scenes/taso2.unity
-  - enabled: 1
     path: Assets/Scenes/taso3.unity
+  - enabled: 1
+    path: Assets/Scenes/taso4.unity
+  - enabled: 1
+    path: Assets/Scenes/taso2.unity
