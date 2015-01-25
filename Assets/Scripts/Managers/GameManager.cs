@@ -19,8 +19,11 @@ public class GameManager : MonoBehaviour {
 
 	public bool currentLevelWon;
 
+	public bool isIOSBuild;
+
 	// Private methods
 	void Start(){
+		isIOSBuild = false;
 		OnLevelWasLoaded();
 	}
 
@@ -41,9 +44,10 @@ public class GameManager : MonoBehaviour {
 			currentGameState = GameState.StartScreen;
 		}
 
-		Time.timeScale = 1;
 		currentLevelWon = false;
 		superManager.menuManager.InitMenu(currentGameState);
+
+		superManager.soundManager.musicAudioSource.Play();
 	}
 
 	// Public methods
@@ -62,7 +66,7 @@ public class GameManager : MonoBehaviour {
 			currentLevelWon = true;
 		}
 
-		Time.timeScale = 0;
+		superManager.soundManager.StopMusic();
 		superManager.soundManager.PlaySound(Sound.WinFare);
 		superManager.menuManager.ShowLevelWonMenu();
 	}
