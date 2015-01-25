@@ -30,6 +30,7 @@ public class SoundManager : MonoBehaviour {
 			break;
 
 		case Sound.Bump:
+			soundObject.GetComponent<AudioSource>().pitch = Random.Range(0.9f,1.1f);
 			soundObject.GetComponent<AudioSource>().clip = bumpAudioClips[Random.Range(0,bumpAudioClips.Length)];
 			break;
 		}
