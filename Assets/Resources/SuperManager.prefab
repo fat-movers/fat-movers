@@ -276,7 +276,7 @@ MonoBehaviour:
   soundPrefab: {fileID: 198888, guid: a5830ebf9504a473ab25cd8a2e8191d8, type: 2}
   buttonClickAudioClip: {fileID: 8300000, guid: cc038ce4ab4b4462299a3bae115675a0,
     type: 3}
-  winFareAudioClip: {fileID: 0}
+  winFareAudioClip: {fileID: 8300000, guid: b83db1d507ae1474f958ed3131e9b1c2, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
