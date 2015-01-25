@@ -1,0 +1,114 @@
+fileFormatVersion: 2
+guid: 004e9ba196e92a94fbfd1190314cca99
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Armature_Curtain
+    100002: Bar
+    100004: CurtainBottom_L
+    100006: CurtainBottom_L_end
+    100008: CurtainBottom_R
+    100010: CurtainBottom_R_end
+    100012: Curtains
+    100014: //RootNode
+    100016: CurtainTop01_L
+    100018: CurtainTop01_L_end
+    100020: CurtainTop01_R
+    100022: CurtainTop01_R_end
+    100024: CurtainTop02_L
+    100026: CurtainTop02_L_end
+    100028: CurtainTop02_R
+    100030: CurtainTop02_R_end
+    100032: IK_CurtainBottom_L
+    100034: IK_CurtainBottom_L_end
+    100036: IK_CurtainBottom_R
+    100038: IK_CurtainBottom_R_end
+    100040: IK_CurtainTop_L
+    100042: IK_CurtainTop_L_end
+    100044: IK_CurtainTop_R
+    100046: IK_CurtainTop_R_end
+    400000: Armature_Curtain
+    400002: Bar
+    400004: CurtainBottom_L
+    400006: CurtainBottom_L_end
+    400008: CurtainBottom_R
+    400010: CurtainBottom_R_end
+    400012: Curtains
+    400014: //RootNode
+    400016: CurtainTop01_L
+    400018: CurtainTop01_L_end
+    400020: CurtainTop01_R
+    400022: CurtainTop01_R_end
+    400024: CurtainTop02_L
+    400026: CurtainTop02_L_end
+    400028: CurtainTop02_R
+    400030: CurtainTop02_R_end
+    400032: IK_CurtainBottom_L
+    400034: IK_CurtainBottom_L_end
+    400036: IK_CurtainBottom_R
+    400038: IK_CurtainBottom_R_end
+    400040: IK_CurtainTop_L
+    400042: IK_CurtainTop_L_end
+    400044: IK_CurtainTop_R
+    400046: IK_CurtainTop_R_end
+    4300000: Curtains
+    7400000: Armature_Curtain|Curtains_BigGust
+    7400002: Armature_Curtain|Curtains_Idle
+    7400004: Armature_Curtain|Curtains_SmallGust
+    7400006: Armature_Curtain|Curtains_TinyWind
+    9500000: //RootNode
+    13700000: Curtains
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
