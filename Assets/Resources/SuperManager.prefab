@@ -280,6 +280,7 @@ MonoBehaviour:
   levelSelectionCanvas: {fileID: 0}
   gameMenuCanvas: {fileID: 0}
   levelWonCanvas: {fileID: 0}
+  touchControlsCanvas: {fileID: 0}
   faderCanvas: {fileID: 0}
   menuButtonPrefab: {fileID: 122896, guid: 801f3038a3ddb4038b75b2a3f9ef7837, type: 2}
 --- !u!114 &11407542
@@ -296,17 +297,18 @@ MonoBehaviour:
   currentGameState: 0
   superManager: {fileID: 11410112}
   levels:
-  - levelName: Level 1 - Sofa Jam
+  - levelName: Paddingtons
     levelSceneName: taso1
-  - levelName: Level 2 - Sofa Movers
+  - levelName: Smiths
     levelSceneName: taso2
-  - levelName: Level 3 - Sofa Ninjas
+  - levelName: Robinsons
     levelSceneName: taso3
-  - levelName: Level 4 - Sofa Maniacs
+  - levelName: Hunts
     levelSceneName: taso4
-  - levelName: Level 5 - S-Maneuver
+  - levelName: Eddingtons
     levelSceneName: lvsmaneuver
   currentLevelWon: 0
+  isIOSBuild: 0
 --- !u!114 &11410112
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -103,10 +103,10 @@ public class MenuManager : MonoBehaviour {
 			LevelObject levelObject = superManager.gameManager.levels[i];
 			menuButton.UpdateButton(levelObject.levelName, "startlevel", levelObject.levelSceneName);
 
-			if(i < 2){
-				menuButton.SetPosition(new Vector3(-105,-(i*(menuButton.GetSize().y+10))-46,0));
+			if(i < 3){
+				menuButton.SetPosition(new Vector3(-148+(i*menuButton.GetSize().x+(i*10)),-60,0));
 			}else{
-				menuButton.SetPosition(new Vector3(105,-((i-2)*(menuButton.GetSize().y+10))-46,0));
+				menuButton.SetPosition(new Vector3(-105+((i-3)*menuButton.GetSize().x+(i*10)),-110,0));
 			}
 
 		}
