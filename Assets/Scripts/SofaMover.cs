@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public enum WalkingState {
 	None,
@@ -18,6 +19,7 @@ public class SofaMover : MonoBehaviour {
 	public SofaMover otherPlayer;
 	private Animation myAnimation;
 	public WalkingState forceWalkingState = WalkingState.None;
+	public AlkuHopotys[] alkuHopotykset;
 
 	private Vector3 publicRotation = Vector3.zero;
 	private Vector3 publicVelocity = Vector3.zero;
@@ -32,7 +34,15 @@ public class SofaMover : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		myAnimation = GetComponentInChildren<Animation> ();
+		myAnimation = transform.Find("BigGuy_Animated").animation;
+		StartCoroutine (AlkuHopota ());
+	}
+
+	IEnumerator AlkuHopota() {
+		foreach(AlkuHopotys alkuHopotys in alkuHopotykset) {
+			yield return new WaitForSeconds (alkuHopotys.waitBeforeStarting);
+			Say (alkuHopotys.text, alkuHopotys.width, alkuHopotys.height, alkuHopotys.waitTime);
+		}
 	}
 	
 	void Update() {
@@ -67,4 +77,39 @@ public class SofaMover : MonoBehaviour {
 		rigidbody.angularVelocity = transform.TransformDirection(ownRotation + publicRotation);
 		rigidbody.velocity = transform.TransformDirection(ownVelocity + publicVelocity);
 	}
+
+	public void Say(string text, int width, int height, float waitTime) {
+		Transform kuplaTrans = transform.Find ("Puhekupla");
+		UnityEngine.UI.Text kuplaText = kuplaTrans.GetComponentInChildren<UnityEngine.UI.Text> ();
+		kuplaText.rectTransform.sizeDelta = new Vector2 (width-100, height-100);
+		kuplaText.text = "";
+		kuplaTrans.GetComponent<RectTransform>().sizeDelta = new Vector2 (width, height);
+		kuplaTrans.Find("Panel").GetComponent<RectTransform>().sizeDelta = new Vector2 (width, height);
+		StartCoroutine (DoSay (waitTime, text));
+	}
+
+	IEnumerator DoSay(float waitTime, string text) {
+		yield return new WaitForSeconds (1.0f);
+		Transform kuplaTrans = transform.Find ("Puhekupla");
+		Animation kuplaAnim = kuplaTrans.animation;
+		UnityEngine.UI.Text kuplaText = kuplaTrans.GetComponentInChildren<UnityEngine.UI.Text> ();
+		kuplaAnim.Play ("BubbleIn");
+		float tickLength = 0.05f;
+		for (int i = 0; i < text.Length; i++) {
+			yield return new WaitForSeconds (tickLength);
+			kuplaText.text += text[i];
+		}
+		yield return new WaitForSeconds (kuplaAnim["BubbleIn"].length+waitTime-(text.Length*tickLength));
+		kuplaAnim.Play("BubbleOut");
+	}
+}
+
+
+[Serializable]
+public class AlkuHopotys {
+	public string text;
+	public int width;
+	public int height;
+	public float waitTime;
+	public float waitBeforeStarting;
 }
