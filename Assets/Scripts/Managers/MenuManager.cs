@@ -148,7 +148,6 @@ public class MenuManager : MonoBehaviour {
 	IEnumerator DoBackToMainMenu() {
 		faderCanvas.animation.Play ("FaderIn");
 		lastFaderEnabled = true;
-		Time.timeScale = 1;
 		yield return new WaitForSeconds(0.2f);
 		superManager.gameManager.MoveToScene("mainmenu");
 		yield return new WaitForSeconds(0.1f);
@@ -173,7 +172,7 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void ShowLevelWonMenu(){
-		levelWonCanvas.GetComponent<Canvas>().enabled = true;
+		levelWonCanvas.animation.Play("CanvasIn");
 	}
 
 	public void ShowCredits(){

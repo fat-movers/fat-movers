@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System;
 
@@ -12,6 +12,7 @@ public enum WalkingState {
 
 public class SofaMover : MonoBehaviour {
 
+	private SuperManager superManager;
 	private float rotateMulti = 10.0f;
 	private float walkMulti = 2.5f;
 	public KeyCode leftKey;
@@ -36,6 +37,7 @@ public class SofaMover : MonoBehaviour {
 	void Start () {
 		myAnimation = transform.Find("BigGuy_Animated").animation;
 		StartCoroutine (AlkuHopota ());
+		superManager = FindObjectOfType(typeof(SuperManager)) as SuperManager;
 	}
 
 	IEnumerator AlkuHopota() {
@@ -55,24 +57,29 @@ public class SofaMover : MonoBehaviour {
 		otherPlayer.SetRotation(Vector3.zero);
 		otherPlayer.SetVelocity(Vector3.zero);
 
-		if (forceWalkingState == WalkingState.Forward || Input.GetKey (leftKey) && Input.GetKey (rightKey)) {
-			ownVelocity = Vector3.right*walkMulti;
-			myAnimation.CrossFade("BigGuy_Walk_FW");
-		} else if (forceWalkingState == WalkingState.Left || Input.GetKey (leftKey)) {
-			otherPlayer.SetRotation(Vector3.up*rotateMulti);
-			ownVelocity = Vector3.forward*walkMulti;
-			myAnimation.CrossFade("BigGuy_Walk_L");
-		} else if (forceWalkingState == WalkingState.Right || Input.GetKey (rightKey)) {
-			otherPlayer.SetRotation(-Vector3.up*rotateMulti);
-			ownVelocity = -Vector3.forward*walkMulti;
-			myAnimation.CrossFade("BigGuy_Walk_R");
-		}else{
-			if(Mathf.Abs(rigidbody.velocity.x) > 0.3f){
-				myAnimation.CrossFade("BigGuy_Walk_BW");
+		if(!superManager.gameManager.currentLevelWon){
+			if (forceWalkingState == WalkingState.Forward || Input.GetKey (leftKey) && Input.GetKey (rightKey)) {
+				ownVelocity = Vector3.right*walkMulti;
+				myAnimation.CrossFade("BigGuy_Walk_FW");
+			} else if (forceWalkingState == WalkingState.Left || Input.GetKey (leftKey)) {
+				otherPlayer.SetRotation(Vector3.up*rotateMulti);
+				ownVelocity = Vector3.forward*walkMulti;
+				myAnimation.CrossFade("BigGuy_Walk_L");
+			} else if (forceWalkingState == WalkingState.Right || Input.GetKey (rightKey)) {
+				otherPlayer.SetRotation(-Vector3.up*rotateMulti);
+				ownVelocity = -Vector3.forward*walkMulti;
+				myAnimation.CrossFade("BigGuy_Walk_R");
 			}else{
-				myAnimation.CrossFade("BigGuy_Idle");
+				if(Mathf.Abs(rigidbody.velocity.x) > 0.3f){
+					myAnimation.CrossFade("BigGuy_Walk_BW");
+				}else{
+					myAnimation.CrossFade("BigGuy_Idle");
+				}
 			}
+		}else{
+			myAnimation.CrossFade("BigGuy_Idle");
 		}
+
 
 		rigidbody.angularVelocity = transform.TransformDirection(ownRotation + publicRotation);
 		rigidbody.velocity = transform.TransformDirection(ownVelocity + publicVelocity);
