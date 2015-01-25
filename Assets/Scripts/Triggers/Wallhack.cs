@@ -10,6 +10,14 @@ public class Wallhack : MonoBehaviour {
 		InvokeRepeating ("ShootAllRays", 1.0f, 1.5f);
 	}
 
+	void Update() {
+		if (Input.GetKeyDown (KeyCode.Y)) {
+			foreach(MonoBehaviour m in gameObject.GetComponents<MonoBehaviour>()) {
+				if(this != m) m.enabled = !m.enabled;
+			}
+		}
+	}
+
 	// Update is called once per frame
 	void ShootAllRays () {
 		foreach(SofaMover mover in movers) {
