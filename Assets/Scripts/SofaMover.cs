@@ -43,7 +43,8 @@ public class SofaMover : MonoBehaviour {
 	}
 
 	IEnumerator AlkuHopota() {
-		foreach(AlkuHopotys alkuHopotys in alkuHopotykset) {
+		for(int i = 0; i < alkuHopotykset.Length; i++) {
+			AlkuHopotys alkuHopotys = alkuHopotykset[i];
 			yield return new WaitForSeconds (alkuHopotys.waitBeforeStarting);
 			Say (alkuHopotys.text, alkuHopotys.width, alkuHopotys.height, alkuHopotys.waitTime);
 		}
@@ -59,7 +60,7 @@ public class SofaMover : MonoBehaviour {
 		otherPlayer.SetRotation(Vector3.zero);
 		otherPlayer.SetVelocity(Vector3.zero);
 
-		if(!superManager.gameManager.currentLevelWon){
+		if(superManager && superManager.gameManager && !superManager.gameManager.currentLevelWon){
 			if (forceWalkingState == WalkingState.Forward || Input.GetKey (leftKey) && Input.GetKey (rightKey)) {
 				ownVelocity = Vector3.right*walkMulti;
 				myAnimation.CrossFade("BigGuy_Walk_FW");
@@ -96,7 +97,7 @@ public class SofaMover : MonoBehaviour {
 	}
 
 	public void Say(string text, int width, int height, float waitTime) {
-		Transform kuplaTrans = transform.Find ("Puhekupla");
+		Transform kuplaTrans = transform.Find ("PuheKupla");
 		UnityEngine.UI.Text kuplaText = kuplaTrans.GetComponentInChildren<UnityEngine.UI.Text> ();
 		kuplaText.rectTransform.sizeDelta = new Vector2 (width-100, height-100);
 		kuplaText.text = "";
@@ -107,7 +108,7 @@ public class SofaMover : MonoBehaviour {
 
 	IEnumerator DoSay(float waitTime, string text) {
 		yield return new WaitForSeconds (1.0f);
-		Transform kuplaTrans = transform.Find ("Puhekupla");
+		Transform kuplaTrans = transform.Find ("PuheKupla");
 		Animation kuplaAnim = kuplaTrans.animation;
 		UnityEngine.UI.Text kuplaText = kuplaTrans.GetComponentInChildren<UnityEngine.UI.Text> ();
 		kuplaAnim.Play ("BubbleIn");
