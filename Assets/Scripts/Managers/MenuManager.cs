@@ -13,6 +13,7 @@ public class MenuManager : MonoBehaviour {
 	public GameObject levelSelectionCanvas;
 	public GameObject gameMenuCanvas;
 	public GameObject levelWonCanvas;
+	public GameObject touchControlsCanvas;
 	public GameObject faderCanvas;
 
 
@@ -64,6 +65,11 @@ public class MenuManager : MonoBehaviour {
 			levelWonCanvas = GameObject.Find("/Menu/LevelWonCanvas");
 			levelWonCanvas.GetComponent<Canvas>().enabled = false;
 			faderCanvas = GameObject.Find("/Menu/FaderCanvas");
+			faderCanvas.GetComponent<Canvas>().enabled = true;
+			touchControlsCanvas = GameObject.Find("/Menu/TouchControlsCanvas");
+			if(!superManager.gameManager.isIOSBuild){
+				touchControlsCanvas.GetComponent<Canvas>().enabled = false;
+			}
 		}
 			break;
 		
@@ -172,6 +178,11 @@ public class MenuManager : MonoBehaviour {
 	}
 
 	public void ShowLevelWonMenu(){
+		StartCoroutine(DoShowLevelWonMenu());
+	}
+	IEnumerator DoShowLevelWonMenu(){
+		touchControlsCanvas.animation.Play("CanvasOut");
+		yield return new WaitForSeconds(0.2f);
 		levelWonCanvas.animation.Play("CanvasIn");
 	}
 

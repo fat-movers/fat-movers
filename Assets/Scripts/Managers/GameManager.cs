@@ -19,8 +19,11 @@ public class GameManager : MonoBehaviour {
 
 	public bool currentLevelWon;
 
+	public bool isIOSBuild;
+
 	// Private methods
 	void Start(){
+		isIOSBuild = false;
 		OnLevelWasLoaded();
 	}
 
