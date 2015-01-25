@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour {
 
 		currentLevelWon = false;
 		superManager.menuManager.InitMenu(currentGameState);
+
+		superManager.soundManager.musicAudioSource.Play();
 	}
 
 	// Public methods
@@ -61,6 +63,7 @@ public class GameManager : MonoBehaviour {
 			currentLevelWon = true;
 		}
 
+		superManager.soundManager.StopMusic();
 		superManager.soundManager.PlaySound(Sound.WinFare);
 		superManager.menuManager.ShowLevelWonMenu();
 	}

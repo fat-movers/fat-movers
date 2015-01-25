@@ -12,6 +12,7 @@ public enum Sound{
 
 public class SoundManager : MonoBehaviour {
 
+	public AudioSource musicAudioSource;
 	public GameObject soundPrefab;
 
 	public AudioClip buttonClickAudioClip;
@@ -54,5 +55,9 @@ public class SoundManager : MonoBehaviour {
 		}
 
 		soundObject.GetComponent<AudioSource>().Play();
+	}
+
+	public void StopMusic(){
+		musicAudioSource.Stop();
 	}
 }

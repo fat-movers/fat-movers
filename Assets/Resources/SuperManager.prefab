@@ -213,7 +213,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: aae91e8ed811b4ae682cec4a77f19f6c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b33278a6a39414eabea903ea57dcc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicAudioSource: {fileID: 8242434}
   soundPrefab: {fileID: 198888, guid: a5830ebf9504a473ab25cd8a2e8191d8, type: 2}
   buttonClickAudioClip: {fileID: 8300000, guid: cc038ce4ab4b4462299a3bae115675a0,
     type: 3}
@@ -343,13 +344,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fb741003879894e89abfae8d806f0336, type: 3}
   - {fileID: 8300000, guid: d933798e7de6841f686aca4083b6303d, type: 3}
   gruntAudioClips:
-  - {fileID: 8300000, guid: c268c8d3b181746529c4c5dfd830fe36, type: 3}
-  - {fileID: 8300000, guid: 22e5da2e65e504cdaa561a1876ac4382, type: 3}
+  - {fileID: 8300000, guid: 7e0b3720fd151499e8af160fb8250bfc, type: 3}
+  - {fileID: 8300000, guid: f2b511d81406a4ca7b8d99e1188a2fee, type: 3}
   - {fileID: 8300000, guid: 309b8328d77aa4bc2ade4d1e53305b78, type: 3}
   - {fileID: 8300000, guid: 5d24e788c34dd46ab84bd7d2848d3747, type: 3}
   - {fileID: 8300000, guid: a6fdd2985f6354c65ba9452d1c6788e3, type: 3}
-  - {fileID: 8300000, guid: 7e0b3720fd151499e8af160fb8250bfc, type: 3}
-  - {fileID: 8300000, guid: f2b511d81406a4ca7b8d99e1188a2fee, type: 3}
   hurtAudioClips:
   - {fileID: 8300000, guid: ac5e8289abc2141dc920fa30eb024f10, type: 3}
   - {fileID: 8300000, guid: 95eb669cc1dca4478ad0aeca746ecf18, type: 3}
