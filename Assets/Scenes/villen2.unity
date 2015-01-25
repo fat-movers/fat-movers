@@ -3868,6 +3868,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11490280, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
+      propertyPath: alkuHopotykset.Array.data[0].text
+      value: This sofa model is really popular
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490282, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
+      propertyPath: alkuHopotykset.Array.data[0].text
+      value: Fortunately, this is the last today
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
   m_RootGameObject: {fileID: 653932023}
@@ -7457,7 +7465,7 @@ MonoBehaviour:
   otherPlayer: {fileID: 1471955831}
   forceWalkingState: 0
   alkuHopotykset:
-  - text: We should move this sofa!
+  - text: Fortunately, this is the last today
     width: 600
     height: 300
     waitTime: 3.5
@@ -9621,7 +9629,7 @@ MonoBehaviour:
   otherPlayer: {fileID: 1167219756}
   forceWalkingState: 0
   alkuHopotykset:
-  - text: What do we do now?
+  - text: This sofa model is really popular
     width: 600
     height: 300
     waitTime: 3.5
@@ -12546,7 +12554,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7e4b1374413bba548a1f8bdc6105d66b, type: 3}
   m_PrefabInternal: {fileID: 294792891}
   m_GameObject: {fileID: 1885812535}
-  m_LocalRotation: {x: -.40405947, y: -.580289423, z: -.580289483, w: .404059619}
+  m_LocalRotation: {x: -.4040595, y: -.580289483, z: -.580289543, w: .404059649}
   m_LocalPosition: {x: 7.76999998, y: .349999994, z: -10.1700001}
   m_LocalScale: {x: 3.02730799, y: 3.02730751, z: 3.02730751}
   m_Children: []

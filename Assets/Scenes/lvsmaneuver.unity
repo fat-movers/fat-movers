@@ -2222,6 +2222,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11490280, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
+      propertyPath: alkuHopotykset.Array.data[0].text
+      value: Seriously, who lives here?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490282, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
+      propertyPath: alkuHopotykset.Array.data[0].text
+      value: Chop chop, fatty boy!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
   m_RootGameObject: {fileID: 687278264}
@@ -6056,7 +6064,7 @@ MonoBehaviour:
   otherPlayer: {fileID: 2102158268}
   forceWalkingState: 0
   alkuHopotykset:
-  - text: We should move this sofa!
+  - text: Chop chop, fatty boy!
     width: 600
     height: 300
     waitTime: 3.5
@@ -9222,7 +9230,7 @@ MonoBehaviour:
   otherPlayer: {fileID: 1463567493}
   forceWalkingState: 0
   alkuHopotykset:
-  - text: What do we do now?
+  - text: Seriously, who lives here?
     width: 600
     height: 300
     waitTime: 3.5

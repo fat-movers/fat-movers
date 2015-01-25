@@ -2217,7 +2217,7 @@ Transform:
   m_Children:
   - {fileID: 1152970112}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!95 &452321628
 Animator:
   serializedVersion: 3
@@ -2351,6 +2351,22 @@ Prefab:
     - target: {fileID: 190278, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490280, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
+      propertyPath: alkuHopotykset.Array.data[0].text
+      value: Phew...
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490280, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
+      propertyPath: alkuHopotykset.Array.data[0].height
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490280, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
+      propertyPath: alkuHopotykset.Array.data[0].width
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490282, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
+      propertyPath: alkuHopotykset.Array.data[0].text
+      value: Less talking, more walking!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
@@ -6320,7 +6336,7 @@ Transform:
   - {fileID: 1777019134}
   - {fileID: 859357875}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1463567491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6373,7 +6389,7 @@ MonoBehaviour:
   otherPlayer: {fileID: 2102158268}
   forceWalkingState: 0
   alkuHopotykset:
-  - text: We should move this sofa!
+  - text: Less talking, more walking!
     width: 600
     height: 300
     waitTime: 3.5
@@ -7181,7 +7197,7 @@ Transform:
   m_LocalScale: {x: 2.43392467, y: 2.43392515, z: 2.43392515}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1612624197
 GameObject:
   m_ObjectHideFlags: 0
@@ -7444,7 +7460,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1 &1804205627
 GameObject:
   m_ObjectHideFlags: 0
@@ -7856,7 +7872,7 @@ Transform:
   m_Children:
   - {fileID: 1963806423}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!1 &1926373693
 GameObject:
   m_ObjectHideFlags: 0
@@ -8737,7 +8753,7 @@ Transform:
   - {fileID: 283122408}
   - {fileID: 651238735}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &2058252947
 GameObject:
   m_ObjectHideFlags: 0
@@ -9095,9 +9111,9 @@ MonoBehaviour:
   otherPlayer: {fileID: 1463567493}
   forceWalkingState: 0
   alkuHopotykset:
-  - text: What do we do now?
-    width: 600
-    height: 300
+  - text: Phew...
+    width: 400
+    height: 200
     waitTime: 3.5
     waitBeforeStarting: .200000003
 --- !u!23 &2102158269

@@ -2298,7 +2298,7 @@ MonoBehaviour:
   otherPlayer: {fileID: 1523574442}
   forceWalkingState: 0
   alkuHopotykset:
-  - text: We should move this sofa!
+  - text: That would be the first time
     width: 600
     height: 300
     waitTime: 3.5
@@ -7408,6 +7408,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11490280, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
+      propertyPath: alkuHopotykset.Array.data[0].text
+      value: This should be easy...
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490282, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
+      propertyPath: alkuHopotykset.Array.data[0].text
+      value: That would be the first time
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a3bb96cef1e4dddbaa1c88885b7377, type: 2}
   m_RootGameObject: {fileID: 1624395089}
@@ -7478,7 +7486,7 @@ MonoBehaviour:
   otherPlayer: {fileID: 588671828}
   forceWalkingState: 0
   alkuHopotykset:
-  - text: What do we do now?
+  - text: This should be easy...
     width: 600
     height: 300
     waitTime: 3.5
