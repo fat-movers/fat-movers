@@ -57,6 +57,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 442432}
   - 114: {fileID: 11442434}
+  - 82: {fileID: 8221704}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -144,6 +145,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 442432}
   m_RootOrder: 0
+--- !u!82 &8221704
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142432}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: f2b511d81406a4ca7b8d99e1188a2fee, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!82 &8242434
 AudioSource:
   m_ObjectHideFlags: 1
@@ -283,6 +342,28 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e45ccfe73c4764ef381f4c647fecfc69, type: 3}
   - {fileID: 8300000, guid: fb741003879894e89abfae8d806f0336, type: 3}
   - {fileID: 8300000, guid: d933798e7de6841f686aca4083b6303d, type: 3}
+  gruntAudioClips:
+  - {fileID: 8300000, guid: c268c8d3b181746529c4c5dfd830fe36, type: 3}
+  - {fileID: 8300000, guid: 22e5da2e65e504cdaa561a1876ac4382, type: 3}
+  - {fileID: 8300000, guid: 309b8328d77aa4bc2ade4d1e53305b78, type: 3}
+  - {fileID: 8300000, guid: 5d24e788c34dd46ab84bd7d2848d3747, type: 3}
+  - {fileID: 8300000, guid: a6fdd2985f6354c65ba9452d1c6788e3, type: 3}
+  - {fileID: 8300000, guid: 7e0b3720fd151499e8af160fb8250bfc, type: 3}
+  - {fileID: 8300000, guid: f2b511d81406a4ca7b8d99e1188a2fee, type: 3}
+  hurtAudioClips:
+  - {fileID: 8300000, guid: ac5e8289abc2141dc920fa30eb024f10, type: 3}
+  - {fileID: 8300000, guid: 95eb669cc1dca4478ad0aeca746ecf18, type: 3}
+  - {fileID: 8300000, guid: 4f89abe0ef71f469b929d1aca6806516, type: 3}
+  - {fileID: 8300000, guid: b9786dd5d6d10464db064cfdac6a37ae, type: 3}
+  - {fileID: 8300000, guid: 6176b9677004a4c7c8ce3222fb51eb4b, type: 3}
+  - {fileID: 8300000, guid: 5e7eb008f3691472287dcfbe25492429, type: 3}
+  stepAudioClips:
+  - {fileID: 8300000, guid: 77e40839216c64deebe30bf0dc6779bb, type: 3}
+  - {fileID: 8300000, guid: 7cd1fa89d9b084c4a9ba7d40736031b4, type: 3}
+  - {fileID: 8300000, guid: 638719afec8634547af69c6a04aaffb5, type: 3}
+  - {fileID: 8300000, guid: 59615ad6cc42d4b81a28967a6b62ca3d, type: 3}
+  - {fileID: 8300000, guid: 1fe0b7de066844f0d918b74716e5e94b, type: 3}
+  - {fileID: 8300000, guid: d373bab54b917408ea2c449c053db7b5, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
