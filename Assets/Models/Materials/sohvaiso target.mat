@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: sohvaiso target
-  m_Shader: {fileID: 4800000, guid: 9ce107479d11178d11005b9844295342, type: 3}
+  m_Shader: {fileID: 4800000, guid: e7adcea84c3e349bfa2ace78f8ab234c, type: 3}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -36,7 +36,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .382352948, g: 1, b: .386612535, a: .109803922}
+        second: {r: .117322668, g: .45588237, b: .217723131, a: .376470596}
       data:
         first:
           name: _OutlineColor
