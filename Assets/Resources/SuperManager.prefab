@@ -217,8 +217,11 @@ MonoBehaviour:
   mainMenuPrefab: {fileID: 101752, guid: cf925ed7650494fef8458d36fa1cc283, type: 2}
   gameMenuPrefab: {fileID: 175914, guid: 1ed7213c317ec4a3e8e25dfdc23679d6, type: 2}
   startCanvas: {fileID: 0}
+  creditsCanvas: {fileID: 0}
   levelSelectionCanvas: {fileID: 0}
   gameMenuCanvas: {fileID: 0}
+  levelWonCanvas: {fileID: 0}
+  faderCanvas: {fileID: 0}
   menuButtonPrefab: {fileID: 122896, guid: 801f3038a3ddb4038b75b2a3f9ef7837, type: 2}
 --- !u!114 &11407542
 MonoBehaviour:
@@ -242,6 +245,9 @@ MonoBehaviour:
     levelSceneName: taso3
   - levelName: Level 4 - Sofa Maniacs
     levelSceneName: taso4
+  - levelName: Level 5 - S-Maneuver
+    levelSceneName: lvsmaneuver
+  currentLevelWon: 0
 --- !u!114 &11410112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,6 +276,7 @@ MonoBehaviour:
   soundPrefab: {fileID: 198888, guid: a5830ebf9504a473ab25cd8a2e8191d8, type: 2}
   buttonClickAudioClip: {fileID: 8300000, guid: cc038ce4ab4b4462299a3bae115675a0,
     type: 3}
+  winFareAudioClip: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
