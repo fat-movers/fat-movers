@@ -56,7 +56,7 @@ public class MenuManager : MonoBehaviour {
 			CreateLevelSelectionMenu();
 		}
 			break;
-
+			
 		case GameState.Level:{
 			currentMenu = Instantiate(gameMenuPrefab) as GameObject;
 			currentMenu.name = "Menu";
@@ -66,8 +66,23 @@ public class MenuManager : MonoBehaviour {
 			faderCanvas = GameObject.Find("/Menu/FaderCanvas");
 		}
 			break;
-
+		
+		case GameState.Credits:{
+			currentMenu = Instantiate(mainMenuPrefab) as GameObject;
+			currentMenu.name = "Menu";
+			levelSelectionCanvas = GameObject.Find("/Menu/LevelSelectionCanvas");
+			startCanvas = GameObject.Find("/Menu/StartCanvas");
+			startCanvas.GetComponent<Canvas>().enabled = false;
+			creditsCanvas = GameObject.Find("/Menu/CreditsCanvas");
+			creditsCanvas.GetComponent<Canvas>().enabled = true;
+			faderCanvas = GameObject.Find("/Menu/FaderCanvas");
+			CreateLevelSelectionMenu();
+			levelSelectionCanvas = GameObject.Find("/Menu/LevelSelectionCanvas");
+			levelSelectionCanvas.GetComponent<Canvas>().enabled = false;
 		}
+			break;
+		
+	}
 
 		faderCanvas.GetComponent<Canvas>().enabled = lastFaderEnabled;
 	}
@@ -126,7 +141,7 @@ public class MenuManager : MonoBehaviour {
 		yield return new WaitForSeconds(0.2f);
 		startCanvas.animation.Play("CanvasIn");
 	}
-
+	
 	public void BackToMainMenu(){
 		StartCoroutine(DoBackToMainMenu());
 	}
@@ -140,6 +155,21 @@ public class MenuManager : MonoBehaviour {
 		faderCanvas.animation.Play ("FaderOut");
 		lastFaderEnabled = false;
 		levelSelectionCanvas.animation.Play("CanvasIn");
+	}
+	
+	public void BackToMainMenuCredits(){
+		StartCoroutine(DoBackToMainMenuCredits());
+	}
+	IEnumerator DoBackToMainMenuCredits() {
+		faderCanvas.animation.Play ("FaderIn");
+		lastFaderEnabled = true;
+		Time.timeScale = 1;
+		yield return new WaitForSeconds(0.2f);
+		superManager.gameManager.MoveToScene("mainmenu");
+		yield return new WaitForSeconds(0.1f);
+		faderCanvas.animation.Play ("FaderOut");
+		lastFaderEnabled = false;
+		creditsCanvas.animation.Play("CanvasIn");
 	}
 
 	public void ShowLevelWonMenu(){

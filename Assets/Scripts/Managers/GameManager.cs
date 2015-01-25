@@ -7,6 +7,7 @@ public enum GameState{
 	StartScreen,
 	LevelSelection,
 	Level,
+	Credits
 }
 
 public class GameManager : MonoBehaviour {
@@ -67,14 +68,20 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void LoadNextLevel(){
-		MoveToScene(GetNextSceneName());
+		string nextLevel = GetNextSceneName ();
+		if (nextLevel == "none") {
+			SuperManager.instance.gameManager.currentGameState = GameState.Credits;
+			superManager.menuManager.BackToMainMenuCredits();
+		} else {
+			MoveToScene(nextLevel);
+		}
 	}
 
 	public string GetNextSceneName(){
 		string nextSceneName = "none";
 
 		string currentLevelName = Application.loadedLevelName;
-		for(int i = 0; i < levels.Count; i++){
+		for(int i = 0; i < levels.Count-1; i++){
 			if(levels[i].levelSceneName == currentLevelName){
 				nextSceneName = levels[i+1].levelSceneName;
 			}
