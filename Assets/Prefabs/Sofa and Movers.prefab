@@ -1576,7 +1576,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190278}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.20000005, y: 1.04999995, z: -4.46000004}
+  m_LocalPosition: {x: 3.01300001, y: .64200002, z: -11.2189999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 412774}
@@ -2299,7 +2299,17 @@ MonoBehaviour:
   rightKey: 275
   otherPlayer: {fileID: 11490280}
   forceWalkingState: 0
-  alkuHopotykset: []
+  alkuHopotykset:
+  - text: We should move this sofa!
+    width: 600
+    height: 300
+    waitTime: 3.5
+    waitBeforeStarting: 5
+  - text: Idgit...
+    width: 400
+    height: 200
+    waitTime: 2
+    waitBeforeStarting: 5.5
 --- !u!114 &11490284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2518,7 +2528,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188600}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: .0148121286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2552,8 +2562,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188604}
-  m_LocalRotation: {x: -4.17294963e-08, y: .989001036, z: .147908777, w: -1.61128725e-07}
-  m_LocalPosition: {x: 0, y: 0, z: -4.46000004}
+  m_LocalRotation: {x: -1.557909e-07, y: .989000976, z: -.147909015, w: -1.80823989e-07}
+  m_LocalPosition: {x: 0, y: 0, z: .0299999993}
   m_LocalScale: {x: .00520711159, y: .00520711206, z: .00520711113}
   m_Children:
   - {fileID: 22488602}
@@ -2562,7 +2572,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 126.629692, y: 286.095551}
+  m_AnchoredPosition: {x: .349999994, y: 1.09000003}
   m_SizeDelta: {x: 431, y: 539}
   m_Pivot: {x: 1, y: 0}
 --- !u!224 &22488606
@@ -2606,7 +2616,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188610}
   m_LocalRotation: {x: -4.17294963e-08, y: .989001036, z: .147908777, w: -1.61128725e-07}
-  m_LocalPosition: {x: 0, y: 0, z: -4.46000004}
+  m_LocalPosition: {x: 0, y: 0, z: -.0399999991}
   m_LocalScale: {x: .00520711159, y: .00520711206, z: .00520711113}
   m_Children:
   - {fileID: 22488608}
@@ -2615,7 +2625,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 126.629692, y: 286.095551}
+  m_AnchoredPosition: {x: .479999989, y: 1.09000003}
   m_SizeDelta: {x: 431, y: 539}
   m_Pivot: {x: 1, y: 0}
 --- !u!1001 &100100000

@@ -307,6 +307,8 @@ MonoBehaviour:
     levelSceneName: taso4
   - levelName: Eddingtons
     levelSceneName: lvsmaneuver
+  - levelName: Greenfields
+    levelSceneName: villen2
   currentLevelWon: 0
   isIOSBuild: 0
 --- !u!114 &11410112

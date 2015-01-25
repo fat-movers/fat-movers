@@ -106,7 +106,7 @@ public class MenuManager : MonoBehaviour {
 			if(i < 3){
 				menuButton.SetPosition(new Vector3(-148+(i*menuButton.GetSize().x+(i*10)),-60,0));
 			}else{
-				menuButton.SetPosition(new Vector3(-105+((i-3)*menuButton.GetSize().x+(i*10)),-110,0));
+				menuButton.SetPosition(new Vector3(-148+((i-3)*menuButton.GetSize().x+((i-3)*10)),-110,0));
 			}
 
 		}
@@ -181,7 +181,7 @@ public class MenuManager : MonoBehaviour {
 		StartCoroutine(DoShowLevelWonMenu());
 	}
 	IEnumerator DoShowLevelWonMenu(){
-		touchControlsCanvas.animation.Play("CanvasOut");
+		//touchControlsCanvas.animation.Play("CanvasOut");
 		yield return new WaitForSeconds(0.2f);
 		levelWonCanvas.animation.Play("CanvasIn");
 	}

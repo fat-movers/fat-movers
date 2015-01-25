@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scenes/taso2.unity
   - enabled: 1
     path: Assets/Scenes/lvsmaneuver.unity
+  - enabled: 1
+    path: Assets/Scenes/villen2.unity
