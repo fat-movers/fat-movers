@@ -222,6 +222,7 @@ GameObject:
   - 223: {fileID: 22375926}
   - 114: {fileID: 11475926}
   - 114: {fileID: 11475924}
+  - 111: {fileID: 11157616}
   m_Layer: 5
   m_Name: LevelWonCanvas
   m_TagString: Untagged
@@ -271,6 +272,22 @@ Animation:
   - {fileID: 7400000, guid: e2cb056630df943cd8a4bcfdf2f3d75d, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &11157616
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175926}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 79aec63a7ab9e47b29de6399c6695797, type: 2}
+  - {fileID: 7400000, guid: 32734d82305184b4fb4f2a0f7084b3e9, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!114 &11409740
