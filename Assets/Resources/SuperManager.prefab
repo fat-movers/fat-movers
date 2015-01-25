@@ -277,6 +277,12 @@ MonoBehaviour:
   buttonClickAudioClip: {fileID: 8300000, guid: cc038ce4ab4b4462299a3bae115675a0,
     type: 3}
   winFareAudioClip: {fileID: 8300000, guid: b83db1d507ae1474f958ed3131e9b1c2, type: 3}
+  bumpAudioClips:
+  - {fileID: 8300000, guid: 1b0e4cd7b7c4147bd8f1165fa0d2c0e7, type: 3}
+  - {fileID: 8300000, guid: 295cab2c299c8486881fee30a1f46bd4, type: 3}
+  - {fileID: 8300000, guid: e45ccfe73c4764ef381f4c647fecfc69, type: 3}
+  - {fileID: 8300000, guid: fb741003879894e89abfae8d806f0336, type: 3}
+  - {fileID: 8300000, guid: d933798e7de6841f686aca4083b6303d, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

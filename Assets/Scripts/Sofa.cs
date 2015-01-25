@@ -3,13 +3,13 @@ using System.Collections;
 
 public class Sofa : MonoBehaviour {
 
-	// Use this for initialization
+	private SuperManager superManager;
+
 	void Start () {
-	
+		superManager = FindObjectOfType(typeof(SuperManager)) as SuperManager;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void OnCollisionEnter(Collision c){
+		superManager.soundManager.PlaySound(Sound.Bump);
 	}
 }
